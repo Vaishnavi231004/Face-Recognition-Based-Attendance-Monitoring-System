@@ -1,0 +1,196 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #5fe2d7, #ededed, #5fe2d7);
+    color: rgb(13, 12, 12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background: rgba(36, 36, 62, 0.9);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Section */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+/* month Picker */
+.month-picker {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(33, 126, 133, 0.9); /* Same as button background */
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder Text */
+.month-picker::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* month Picker Hover Effect */
+.month-picker:hover {
+    background: rgb(94, 197, 194);
+}
+
+/* month Picker Focus Effect */
+.month-picker:focus {
+    background: rgb(94, 197, 194);
+    box-shadow: 0 0 8px rgba(33, 126, 133, 0.9);
+}
+
+/* Glassmorphism Effect for Cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures button stays at the bottom */
+    background: rgb(249, 252, 252);
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    height: 450px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensures consistent spacing inside the card */
+.card-content {
+    flex: 1; /* Pushes button down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Card Headings */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(33, 126, 133, 0.9);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background:#5fe2d7;
+    transform: scale(1.05);
+}
+
+/* Ensures buttons inside all cards are aligned */
+.card .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Tagline Styling */
+.tagline {
+    font-size: 56px;
+    font-weight: 500;
+    font-family: "Staatliches", serif;
+    color: #18cedb;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #18cedb;
+}
+
+/* Sub-Tagline */
+.sub-tagline {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Container for Page Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+/* Timetable Section */
+.timetable-container {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Timetable Button */
+.timetable-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 880px;
+    background-color: rgba(33, 126, 133, 0.9);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Timetable Button Hover */
+.timetable-btn:hover {
+    background-color: #5fe2d7;
+}

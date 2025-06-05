@@ -1,0 +1,235 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, rgb(68, 67, 67));
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+
+
+
+/* Dashboard Section */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    align:right;
+}
+
+/* Glassmorphism Effect for Cards */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Headings */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: 3cdbd3;
+    color: #3cdbd3;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: rgb(59, 110, 139);
+    transform: scale(1.05);
+}
+
+/* Buttons inside Download Card */
+.card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Date Picker */
+.month-picker {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #3cdbd3;
+}
+
+/* Loader Animation */
+.loader {
+    display: none;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid #ff4b5c;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.timetable-container {
+  margin: 20px auto;
+  width: 90%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ff6f61;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.highlight {
+  background: #ffdd57 !important;
+  color: black !important;
+  font-weight: bold;
+}
+/* Timetable Page Styling */
+.timetable-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Button Styling */
+.timetable-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #316ba8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.timetable-btn:hover {
+  background-color: #0056b3;
+}
+.tagline {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff4b5c;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(255, 75, 92, 0.5);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+/* Tagline Styling */
+.tagline-container {
+  flex: 1;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.tagline {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff4b5c;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(255, 75, 92, 0.5);
+}
+
+.sub-tagline {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* Dashboard Cards */
+.dashboard {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
