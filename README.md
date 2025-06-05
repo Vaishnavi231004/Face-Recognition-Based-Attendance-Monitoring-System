@@ -35,4 +35,15 @@ face-attendance-system/
 ├── Attendance_2025-04.csv # Logged attendance data monthly in csv form
 ├── README.md
 ├── requirements.txt
+├── outputScreenshot #contains output photo of project features
 ---------------------------------------------------------------------------------------------
+Follow these steps to run the project locally on your machine:
+1.	Clone the Repository
+2.	Install Dependencies
+3.	Set Up Directory Structure
+4.	Run Streamlit Dashboard: streamlit run update1.py
+5.	Run the Flask App: python app.py
+----------------------------------------------------------------------------------------------
+
+       
+
