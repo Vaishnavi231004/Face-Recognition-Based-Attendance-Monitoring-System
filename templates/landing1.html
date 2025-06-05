@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+
+    <div class="content-box">
+        <!-- Left Side: Text Content -->
+        <div class="text-content">
+
+            <h2 class="tagline">Say Goodbye to Manual Logs - Experience Smart Attendance!</h2>
+            
+            <!-- Element for Typed.js animation -->
+            <h3 class="sub-tagline">
+                <span id="typed-text"></span>
+            </h3>
+            
+            <a href="{{ url_for('home') }}" class="cta-button">Get Started</a>
+
+
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='face.webp') }}"  alt="Smart Attendance" class="attendance-image">
+        </div>
+    </div>
+
+    <!-- Typed.js Animation Script -->
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: ["Track Attendance.", "Analyze Data.", "Stay Ahead!"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Passion+One:wght@400;700;900&family=Staatliches&display=swap');
+        </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+   
+    <div class="tagline-container">
+        <h2 class="tagline">Attendance Monitoring System</h2>
+        <h3 class="sub-tagline">Artificial Intelligence & Data Science</h3>
+    </div>
+
+
+    <!-- Dashboard Section -->
+    <div class="dashboard">
+        <div class="card">
+            <h2>Take Photo</h2>
+            <p>Take a picture to register a new student in the system</p>
+            <button class="btn" id="captureBtn"><i class="fas fa-camera"></i> Capture</button>
+        </div>
+        <div class="card">
+            <h2>Real-Time Attendance</h2>
+            <p>Scan faces in real-time and log attendance instantly.</p>
+            <button class="btn" id="startCameraBtn"><i class="fas fa-video"></i> Start Camera</button>
+        </div>
+
+
+        <div class="card">
+            <h2>Download Attendance</h2>
+            <p>Quickly access and download attendance records for any selected month. Choose between CSV for data analysis or PDF for easy sharing and documentation.</p>
+            <input type="month" id="attendanceMonth" class="month-picker" value="2025-01">
+            <button class="btn" id="downloadCsvBtn"><i class="fas fa-file-csv"></i> Download CSV</button>
+            <button class="btn" id="downloadPdfBtn"><i class="fas fa-file-pdf"></i> Download PDF</button>
+        </div>
+
+        <div class="card">
+            <h2>Visualization</h2>
+            <p>Analyze attendance trends with interactive charts.</p>
+            <button class="btn" onclick="redirectToStreamlit()">
+                <i class="fas fa-chart-line"></i> Visualize
+            </button>
+        </div>
+        
+        <script>
+            function redirectToStreamlit() {
+                window.location.href = "http://localhost:8501/";  // Ensure this matches your Streamlit server URL
+            }
+        </script>
+        
+    </div>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+        <a href="/timetable" class="btn timetable-btn">📅 View Weekly Timetable</a>
+    </div>
+
+    <!-- Loader Animation (Hidden by Default) -->
+    <div id="loader" class="loader"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

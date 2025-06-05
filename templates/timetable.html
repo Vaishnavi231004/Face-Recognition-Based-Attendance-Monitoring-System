@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2>Weekly Timetable</h2>
+        <a href="/"> <i class="fas fa-home"></i> Home</a>
+      </nav>
+
+    <!-- Timetable Section -->
+    <div class="timetable-container">
+        <h2> Weekly Class Schedule</h2>
+        <table border="1" style="width: 100%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>📅 Day</th>
+                    <th>⏰ Time Slot</th>
+                    <th>📖 Subject</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in timetable %}
+                <tr>
+                    <td>{{ entry['Day'] }}</td>
+                    <td>{{ entry['TimeSlot'] }}</td>
+                    <td>{{ entry['Subject'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
